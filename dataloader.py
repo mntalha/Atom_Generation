@@ -9,13 +9,15 @@ from torch_geometric.loader import DataLoader
 import pdb
 from typing import Optional, Sequence
 from dataset import CrystDataset
-from utils.data_utils import get_scaler_from_data_list
 import torch
 from pathlib import Path
 import numpy as np
 import random
 import os
 import torch
+
+from helper.utils.data_utils import get_scaler_from_data_list
+
 def worker_init_fn(id: int):
     """
     DataLoaders workers init function.
